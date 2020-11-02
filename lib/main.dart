@@ -9,6 +9,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Coding Books -E.Books',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xFF0A0E21),
+        accentColor: Colors.grey[850],
+        scaffoldBackgroundColor: Color(0xFF0A0E21),
+      ),
       home: AppPage(),
     );
   }
@@ -26,12 +31,15 @@ class _AppPageState extends State<AppPage> {
       appBar: AppBar(
         title: Text(
           'Coding E - Books',
-          style: GoogleFonts.lato(),
+          style: GoogleFonts.pacifico(fontSize: 22.0),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey[850],
       ),
       body: Container(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: null,
+      ),
     );
   }
 }
